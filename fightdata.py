@@ -5,8 +5,8 @@ from scrapy.spiders import Rule
 from scrapy.conf import settings
 from scrapy.crawler import CrawlerProcess
 
-class fightFinder(CrawlSpider):
-    name = 'fight_data_extractor'
+class fighterRecords(CrawlSpider):
+    name = 'record_extractor'
     allowed_domains = ['www.sherdog.com']
 
     rules = (
@@ -28,6 +28,17 @@ class fightFinder(CrawlSpider):
             'class' : response.css(CLASS).get(),
         }
 
+        NEXT_PAGE = '.module.fight_history a::attr(href)'
+        next = response.css(NEXT_PAGE).get()
+        if next:
+            yield scrapy.Request (
+                response.urljoin(next),
+                callback=self.parse_fighter
+            )
+
+class matchFinder(scrapy.Spider):
+    pass
+
 
 process = CrawlerProcess({
     'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
@@ -37,12 +48,17 @@ process = CrawlerProcess({
 })
 
 URL = 'https://www.sherdog.com/fighter/Khabib-Nurmagomedov-56035'
+DEPTH = 3
 
 # get input url from user
 #print('Root fighter URL: ')
 #URL = input()
 
-process.crawl(fightFinder, start_urls=[URL])
+# get maximum crawl depth 
+#print('Specify depth limit: ')
+#DEPTH = input()
+
+process.crawl(fighterRecords, start_urls=[URL])
 process.start()
 
 total_wins = 0
@@ -50,19 +66,18 @@ total_losses = 0
 
 # open generate csv and print contents
 with open('data.csv', 'r') as csvFile:
-    #reader = csv.DictReader(csvFile, fieldnames=('name', 'wins', 'losses', 'class'))
     reader = csv.reader(csvFile)
     opp_list = list(reader)
-    for row in opp_list[1:]:
+    for row in opp_list[1:]: # skip reading header
         print(row)
-        total_wins += int(row[1])
-        total_losses += int(row[2])
+        total_wins += float(row[1])
+        total_losses += float(row[2])
 
 csvFile.close()
 
 # delete csv when finished
 os.remove('data.csv')
 
-print ("\nTotal wins for opponents: %i" % (total_wins))
-print ("\nTotal losses for opponents: %i" % (total_losses))
-print ("\nWin/loss ratio for opponents combined: %d" % (total_wins/total_losses))
+print ("\nTotal wins for opponents: %.0f" % (total_wins))
+print ("Total losses for opponents: %.0f" % (total_losses))
+print ("\nWin/loss ratio for opponents combined: %.2f" % (total_wins/total_losses))
