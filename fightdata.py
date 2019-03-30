@@ -1,82 +1,155 @@
-import scrapy, os, csv
-from scrapy.linkextractors import LinkExtractor
-from scrapy.spiders import CrawlSpider
-from scrapy.spiders import Rule
-from scrapy.conf import settings
-from scrapy.crawler import CrawlerProcess
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse, urljoin
 
-class fighterRecords(CrawlSpider):
-    name = 'record_extractor'
-    allowed_domains = ['www.sherdog.com']
+class Fighter(object):
+    def __init__(self, name, wins, losses, wtclass):
+        self.name = name
+        self.wins = wins
+        self.losses = losses
+        self.wtclass = wtclass
 
-    rules = (
-        Rule(LinkExtractor(allow=('fighter'), restrict_css=('.content.table',)), callback='parse_fighter'),
-    )
+    # function for printing fighter data
+    def print(self):
+        print('Name: ' + self.name + ' | Record: ' + self.wins + '-' + self.losses + 
+              ' | Weightclass: ' + self.wtclass)
 
-    def parse_fighter(self, response):
-        # these variables specify the location of data in the html file
-        # using xpath or css
-        NAME = '.module.bio_fighter.vcard .fn::text'
-        WINS = '.module.bio_fighter.vcard .bio_graph .counter::text'
-        LOSSES = '.module.bio_fighter.vcard .bio_graph.loser .counter::text'
-        CLASS = '.module.bio_fighter.vcard .item.wclass .title a::text'
+class ExtractFighterInfo(object):
+    # default constructor
+    def __init__(self, link):
+        # specified root url
+        url = requests.get(link)
 
-        yield {
-            'name' : response.css(NAME).get(),
-            'wins' : response.css(WINS).get(),
-            'losses' : response.css(LOSSES).get(),
-            'class' : response.css(CLASS).get(),
-        }
+        # store base url for later use
+        parsed_uri = urlparse(link)
+        self.base = '{uri.scheme}://{uri.netloc}'.format(uri=parsed_uri)
 
-        NEXT_PAGE = '.module.fight_history a::attr(href)'
-        next = response.css(NEXT_PAGE).get()
-        if next:
-            yield scrapy.Request (
-                response.urljoin(next),
-                callback=self.parse_fighter
-            )
+        # load url into bs4 for parsing
+        self.soup = BeautifulSoup(url.text, 'html.parser')
 
-class matchFinder(scrapy.Spider):
-    pass
+    # function for extracting fighter data, returns a fighter
+    def getInfo(self):
+        # extract name
+        name = self.soup.find('span', {'class': 'fn'}).text.strip()
+
+        # extract wins & loss
+        record = self.soup.find_all('span', {'class': 'counter'})
+        wins = record[0].text.strip()
+        losses = record[1].text.strip()
+
+        # extract weightclass
+        wtclass = self.soup.find('strong', {'class': 'title'}).text.strip()
+
+        return Fighter(name, wins, losses, wtclass)
+
+    # function for parsing opponents, returns a list of fighters
+    def getOppInfo(self, depth = 1):
+        opponents = []
+
+        fightHistory = self.soup.find_all('div', {'class': 'module fight_history'})
+
+        for div in fightHistory:
+            # make sure we are grabbing links from fight history div
+            if ('History' in div.find('h2').text.strip()):
+                contentTable = div.find('div', {'class': 'content table'})
+                oppUrls = contentTable.find_all('a', href=True)
+
+                for urls in oppUrls:
+                    # only get urls that link to another fighter
+                    if ('fighter' in str(urls)):
+                        print('Extracting data from opponent: ' + str(urls.text.strip()))
+
+                        # make a new request to join opponent page
+                        link = urljoin(self.base, urls['href'])
+                        url = requests.get(link)
+                        self.soup = BeautifulSoup(url.text, 'html.parser')
+
+                        opponents.append(self.getInfo())
+
+        return opponents
+
+class EventParser(object):
+    def __init__(self, link):
+        # specified eveny url
+        event = requests.get(link)
+
+        # store base url for later use
+        parsed_uri = urlparse(link)
+        self.base = '{uri.scheme}://{uri.netloc}'.format(uri=parsed_uri)
+
+        # load url into bs4 for parsing
+        self.soup = BeautifulSoup(event.text, 'html.parser')
+
+        eventName = self.soup.find('span', {'itemprop': 'name'}).text.strip()
+        print(eventName)
+
+    def getMatch(self):
+        match = []
+        matchList = []
+
+        # get main event
+        mainEvent = self.soup.find('div', {'class': 'module fight_card'})
+        matchHeader = mainEvent.find_all('h3')
+
+        leftFighter = matchHeader[0].find('a', href=True)
+        rightFighter = matchHeader[1].find('a', href=True)
+
+        leftFighterURL = urljoin(self.base, leftFighter['href'])
+        rightFighterURL = urljoin(self.base, rightFighter['href'])
+
+        match.append(leftFighterURL)
+        match.append(rightFighterURL)
+
+        print('Adding match: ' + leftFighter.text.strip() + ' vs ' + rightFighter.text.strip())
+        matchList.append(match)
+
+        # get other matches
+        tbody = self.soup.find('tbody')
+        prelims = tbody.find_all('tr', {'itemprop': 'subEvent'})
+
+        # each table row contains one preliminary fight
+        # add them one by one to the match list
+        for prelim in prelims:
+            fight = prelim.find('meta', {'itemprop': 'name'})
+            print('Adding match: ' + fight['content'])
+
+            matchUrls = prelim.find_all('a', {'itemprop': 'url'})
+            
+            match = []
+        
+            for url in matchUrls:
+                fullUrl = urljoin(self.base, url['href'])
+                match.append(fullUrl)
+
+            matchList.append(match)
+
+        return matchList
 
 
-process = CrawlerProcess({
-    'USER_AGENT': 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1)',
-    'FEED_FORMAT': 'csv',
-    'FEED_URI': 'data.csv'
-})
+extractor = ExtractFighterInfo('https://www.sherdog.com/fighter/Khabib-Nurmagomedov-56035')
 
-URL = 'https://www.sherdog.com/fighter/Khabib-Nurmagomedov-56035'
-DEPTH = 3
+fighter = extractor.getInfo()
 
-# get input url from user
-#print('Root fighter URL: ')
-#URL = input()
+fighter.print()
 
-# get maximum crawl depth 
-#print('Specify depth limit: ')
-#DEPTH = input()
+opponents = extractor.getOppInfo(1)
 
-process.crawl(fighterRecords, start_urls=[URL])
-process.start()
+for opp in opponents:
+    opp.print()
 
-total_wins = 0
-total_losses = 0
+print('----------------------------------------------')
 
-# open generate csv and print contents
-with open('data.csv', 'r') as csvFile:
-    reader = csv.reader(csvFile)
-    opp_list = list(reader)
-    for row in opp_list[1:]: # skip reading header
-        print(row)
-        total_wins += float(row[1])
-        total_losses += float(row[2])
+event = EventParser('https://www.sherdog.com/events/UFC-on-ESPN-2-Barboza-vs-Gaethje-72035')
 
-csvFile.close()
+matches = event.getMatch()
 
-# delete csv when finished
-os.remove('data.csv')
+for match in matches:
+    print(match)
 
-print ("\nTotal wins for opponents: %.0f" % (total_wins))
-print ("Total losses for opponents: %.0f" % (total_losses))
-print ("\nWin/loss ratio for opponents combined: %.2f" % (total_wins/total_losses))
+    data = ExtractFighterInfo(match)
+    fighter = data.getInfo()
+    fighter.print()
+
+    opponents = data.getOppInfo()
+    for opp in opponents:
+        opp.print()
