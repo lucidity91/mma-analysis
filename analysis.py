@@ -8,14 +8,16 @@
 from fightdata import EventParser, ExtractFighterInfo
 import csv, os
 
-event = EventParser('https://www.sherdog.com/events/UFC-on-ESPN-2-Barboza-vs-Gaethje-72035')
+link = input("Enter MMA Event URL: ")
+event = EventParser(link)
 
+# pull matches from input event
 matches = event.getMatch()
-
 count = 1
 
 # open csv or replace existing
-file = "results.csv"
+file = input("Enter a filename for output: ")
+file += ".csv"
 if os.path.exists(file):
     os.remove(file)
 csv = open(file, "w")
@@ -89,8 +91,8 @@ for match in matches:
     header = "Name, Wins, Losses, Win Rate, Opponent Wins, Opponent Losses, Opponent Win Ratio, Opponent Win Rate\n"
     csv.write(header)
 
-    fighterA = str(leftFighter.name) + "," + str(leftFighter.wins) + "," + str(leftFighter.losses) + "," + str(leftFighterRate) + "," + str(leftOppWins) + "," + str(leftOppLosses) + "," + f"{leftRatio:.2f}" + "," + f"{leftRate:.2f}" + "\n"
-    fighterB = str(rightFighter.name) + "," + str(rightFighter.wins) + "," + str(rightFighter.losses) + "," + str(rightFighterRate) + ","  + str(rightOppWins) + "," + str(rightOppLosses) + "," + f"{rightRatio:.2f}" + "," + f"{rightRate:.2f}" + "\n"
+    fighterA = str(leftFighter.name) + "," + str(leftFighter.wins) + "," + str(leftFighter.losses) + "," + f"{leftFighterRate:.2f}" + "," + str(leftOppWins) + "," + str(leftOppLosses) + "," + f"{leftRatio:.2f}" + "," + f"{leftRate:.2f}" + "\n"
+    fighterB = str(rightFighter.name) + "," + str(rightFighter.wins) + "," + str(rightFighter.losses) + "," + f"{rightFighterRate:.2f}" + ","  + str(rightOppWins) + "," + str(rightOppLosses) + "," + f"{rightRatio:.2f}" + "," + f"{rightRate:.2f}" + "\n"
     csv.write(fighterA)
     csv.write(fighterB)
 
