@@ -21,7 +21,7 @@ matches = event.getMatch()
 count = 1
 
 # open csv or replace existing
-file = input("Enter a filename for output: ")
+file = input("\nEnter a filename for output: ")
 file += ".csv"
 if os.path.exists(file):
     os.remove(file)
