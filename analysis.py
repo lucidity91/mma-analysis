@@ -5,11 +5,16 @@
 # File: analysis.py
 # Purpose: Program for analysis of extracted fighter data
 
-from fightdata import EventParser, ExtractFighterInfo
-import csv, os
+from fightdata import EventParser, ExtractFighterInfo, UpcomingEvents
+import csv, os, timeit
 
-link = input("Enter MMA Event URL: ")
+# prompt user to select an upcoming event
+eventlist = UpcomingEvents()
+link = eventlist.getUpcoming()
 event = EventParser(link)
+
+# start program timer
+start = timeit.default_timer()
 
 # pull matches from input event
 matches = event.getMatch()
@@ -103,3 +108,6 @@ for match in matches:
     count = count + 1
 
 csv.close()
+
+stop = timeit.default_timer()
+print('Runtime: ', stop - start)

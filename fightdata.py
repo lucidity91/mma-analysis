@@ -3,7 +3,7 @@
 # 001201773
 # CPSC 4310 Project
 # File: fightdata.py
-# Purpose: Program for extracting fighter data
+# Purpose: Contains classes used for extracting fight data
 
 import requests
 from bs4 import BeautifulSoup
@@ -52,6 +52,7 @@ class ExtractFighterInfo(object):
     # function for parsing opponents, returns a list of fighters
     def getOppInfo(self):
         opponents = []
+        visited = []
 
         fightHistory = self.soup.find_all('div', {'class': 'module fight_history'})
 
@@ -63,7 +64,9 @@ class ExtractFighterInfo(object):
 
                 for urls in oppUrls:
                     # only get urls that link to another fighter
-                    if ('fighter' in str(urls)):
+                    if ('fighter' in str(urls) and str(urls) not in visited):
+                        # mark as visited and extract data
+                        visited.append(str(urls))
                         print('Extracting data from opponent: ' + str(urls.text.strip()))
 
                         # make a new request to join opponent page
@@ -111,8 +114,8 @@ class EventParser(object):
         matchList.append(match)
 
         # get other matches
-        tbody = self.soup.find('tbody')
-        prelims = tbody.find_all('tr', {'itemprop': 'subEvent'})
+        matchTable = self.soup.find('div', {'class': 'module event_match'})
+        prelims = matchTable.find_all('tr', {'itemprop': 'subEvent'})
 
         # each table row contains one preliminary fight
         # add them one by one to the match list
@@ -131,3 +134,53 @@ class EventParser(object):
             matchList.append(match)
 
         return matchList
+
+class UpcomingEvents(object):
+    def __init__(self):
+        while True:
+            print('Select one of the following MMA promotions: ')
+            print('1) UFC')
+            print('2) Bellator')
+            choice = int(input())
+
+            if choice == 1:
+                promo = "https://www.sherdog.com/organizations/Ultimate-Fighting-Championship-UFC-2"
+                break
+            elif choice == 2:
+                promo = "https://www.sherdog.com/organizations/Bellator-MMA-1960"
+                break
+            else:
+                print('Invalid choice, try again.')
+
+        org = requests.get(promo)
+
+        # store base url for later use
+        parsed_uri = urlparse(promo)
+        self.base = '{uri.scheme}://{uri.netloc}'.format(uri=parsed_uri)
+
+        # load url into bs4 for parsing
+        self.soup = BeautifulSoup(org.text, 'html.parser')
+
+    def getUpcoming(self):
+        tbody = self.soup.find('table', {'class': 'event'})
+        events = tbody.find_all('tr', {'itemtype': 'http://schema.org/Event'})
+
+        count = 0
+        print()
+
+        # list all upcoming events
+        for event in events:
+            eventName = event.find('span', {'itemprop': 'name'}).text.strip()
+            print(str(count) + ") " + eventName)
+            count = count + 1
+
+        # get user selection
+        while True:
+            selection = int(input("\nSelect one of the above events to analyze: "))
+            if selection < 0 or selection > len(events)-1:
+                print('Invalid selection, try again.')
+            else:
+                eventUrl = urljoin(self.base, events[selection].find('a', {'itemprop': 'url'})['href'])
+                break
+
+        return str(eventUrl)
