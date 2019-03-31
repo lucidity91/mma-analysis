@@ -67,37 +67,61 @@ for match in matches:
         rightOppLosses += int(fighter.losses)
 
     # calculate fighter win rate
-    leftFighterRate = int(leftFighter.wins)/(int(leftFighter.wins)+int(leftFighter.losses))
-    rightFighterRate = int(rightFighter.wins)/(int(rightFighter.wins)+int(rightFighter.losses))
-    
+    try:
+        leftFighterRate = int(leftFighter.wins)/(int(leftFighter.wins)+int(leftFighter.losses))
+    except ZeroDivisionError:
+        leftFighterRate = 1
+    try:
+        rightFighterRate = int(rightFighter.wins)/(int(rightFighter.wins)+int(rightFighter.losses))
+    except ZeroDivisionError:
+        rightFighterRate = 1
+
     # calculate opponents win ratio
-    leftRatio = leftOppWins/leftOppLosses
-    rightRatio = rightOppWins/rightOppLosses
+    try:
+        leftRatio = leftOppWins/leftOppLosses
+    except ZeroDivisionError:
+        leftRatio = 1
+    try:
+        rightRatio = rightOppWins/rightOppLosses
+    except ZeroDivisionError:
+        rightRatio = 1
 
     # calculate opponents win rate
-    leftRate = leftOppWins/(leftOppWins+leftOppLosses)
-    rightRate = rightOppWins/(rightOppWins+rightOppLosses)
+    try:
+        leftRate = leftOppWins/(leftOppWins+leftOppLosses)
+    except ZeroDivisionError:
+        leftRate = 1
+    try:
+        rightRate = rightOppWins/(rightOppWins+rightOppLosses)
+    except ZeroDivisionError:
+        rightRate = 1
+
+    # calculate win rate differential
+    leftWinDiff = leftFighterRate - leftRate
+    rightWinDiff = rightFighterRate - rightRate
 
     # print details
-    print('\nName | Record | Win Ratio | Win Rate')
+    print('\nName | Record | Win Ratio | Win Rate | Diff')
     print(leftFighter.name, ' | ', 
           leftOppWins, '-', leftOppLosses, ' | ', 
           f"{leftRatio:.2f}", ' | ', 
-          f"{leftRate:.2f}")
+          f"{leftRate:.2f}" , ' | ',
+          f"{leftWinDiff:.2f}")
     print(rightFighter.name, ' | ', 
           rightOppWins, '-', rightOppLosses, ' | ', 
           f"{rightRatio:.2f}", ' | ', 
-          f"{rightRate:.2f}")
+          f"{rightRate:.2f}" , ' | ',
+          f"{rightWinDiff:.2f}")
 
     # write to csv
     fight = "Fight: " + str(count) + "\n"
     csv.write(fight)
 
-    header = "Name, Wins, Losses, Win Rate, Opponent Wins, Opponent Losses, Opponent Win Ratio, Opponent Win Rate\n"
+    header = "Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.\n"
     csv.write(header)
 
-    fighterA = str(leftFighter.name) + "," + str(leftFighter.wins) + "," + str(leftFighter.losses) + "," + f"{leftFighterRate:.2f}" + "," + str(leftOppWins) + "," + str(leftOppLosses) + "," + f"{leftRatio:.2f}" + "," + f"{leftRate:.2f}" + "\n"
-    fighterB = str(rightFighter.name) + "," + str(rightFighter.wins) + "," + str(rightFighter.losses) + "," + f"{rightFighterRate:.2f}" + ","  + str(rightOppWins) + "," + str(rightOppLosses) + "," + f"{rightRatio:.2f}" + "," + f"{rightRate:.2f}" + "\n"
+    fighterA = str(leftFighter.name) + "," + str(leftFighter.wins) + "," + str(leftFighter.losses) + "," + f"{leftFighterRate:.2f}" + "," + str(leftOppWins) + "," + str(leftOppLosses) + "," + f"{leftRatio:.2f}" + "," + f"{leftRate:.2f}" + ',' + f"{leftWinDiff:.2f}" + "\n"
+    fighterB = str(rightFighter.name) + "," + str(rightFighter.wins) + "," + str(rightFighter.losses) + "," + f"{rightFighterRate:.2f}" + ","  + str(rightOppWins) + "," + str(rightOppLosses) + "," + f"{rightRatio:.2f}" + "," + f"{rightRate:.2f}"  + ',' + f"{rightWinDiff:.2f}" + "\n"
     csv.write(fighterA)
     csv.write(fighterB)
 
