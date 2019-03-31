@@ -1,3 +1,10 @@
+# Eric Mu
+# Apr. 1, 2019
+# 001201773
+# CPSC 4310 Project
+# File: fightdata.py
+# Purpose: Program for extracting fighter data
+
 import requests
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse, urljoin
@@ -43,7 +50,7 @@ class ExtractFighterInfo(object):
         return Fighter(name, wins, losses, wtclass)
 
     # function for parsing opponents, returns a list of fighters
-    def getOppInfo(self, depth = 1):
+    def getOppInfo(self):
         opponents = []
 
         fightHistory = self.soup.find_all('div', {'class': 'module fight_history'})
@@ -124,32 +131,3 @@ class EventParser(object):
             matchList.append(match)
 
         return matchList
-
-
-extractor = ExtractFighterInfo('https://www.sherdog.com/fighter/Khabib-Nurmagomedov-56035')
-
-fighter = extractor.getInfo()
-
-fighter.print()
-
-opponents = extractor.getOppInfo(1)
-
-for opp in opponents:
-    opp.print()
-
-print('----------------------------------------------')
-
-event = EventParser('https://www.sherdog.com/events/UFC-on-ESPN-2-Barboza-vs-Gaethje-72035')
-
-matches = event.getMatch()
-
-for match in matches:
-    print(match)
-
-    data = ExtractFighterInfo(match)
-    fighter = data.getInfo()
-    fighter.print()
-
-    opponents = data.getOppInfo()
-    for opp in opponents:
-        opp.print()
