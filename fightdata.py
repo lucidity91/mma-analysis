@@ -3,7 +3,7 @@
 # 001201773
 # CPSC 4310 Project
 # File: fightdata.py
-# Purpose: Contains classes used for extracting fight data
+# Purpose: Contains modules used for extracting fight data
 
 import requests
 from bs4 import BeautifulSoup
@@ -184,3 +184,4 @@ class UpcomingEvents(object):
                 break
 
         return str(eventUrl)
+        
