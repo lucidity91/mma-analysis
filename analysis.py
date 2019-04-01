@@ -15,6 +15,8 @@ event = EventParser(link)
 
 # start program timer
 start = timeit.default_timer()
+# list of parsed fighters
+parsed = []
 
 # pull matches from input event
 matches = event.getMatch()
@@ -23,6 +25,8 @@ count = 1
 # open csv or replace existing
 file = input("Enter a filename for output: ")
 file += ".csv"
+raw_file = file + "_raw.csv"
+
 if os.path.exists(file):
     os.remove(file)
 csv = open(file, "w")
@@ -43,6 +47,12 @@ for match in matches:
     rightFighter = extractRight.getInfo()
     rightFighter.print()
 
+    # add to parsed list
+    if leftFighter not in parsed:
+        parsed.append(leftFighter)
+    if rightFighter not in parsed:
+        parsed.append(rightFighter)
+
     print('\nQuality of Competition Analysis:')
     print('-----------------------------------------------') 
 
@@ -58,6 +68,8 @@ for match in matches:
     for fighter in leftOpponents:
         leftOppWins += int(fighter.wins)
         leftOppLosses += int(fighter.losses)
+        if fighter not in parsed:
+            parsed.append(fighter)
 
     # combine the win/loss record of all oppoents for left
     rightOppWins = 0
@@ -65,6 +77,8 @@ for match in matches:
     for fighter in rightOpponents:
         rightOppWins += int(fighter.wins)
         rightOppLosses += int(fighter.losses)
+        if fighter not in parsed:
+            parsed.append(fighter)
 
     # calculate fighter win rate
     try:
@@ -131,7 +145,31 @@ for match in matches:
     print('********************************************')
     count = count + 1
 
+
+# stop timer
+stop = timeit.default_timer()
+
+totalTime = stop - start
+totalFighters = len(parsed)
+timePerUrl = totalTime/totalFighters
+
+print('Runtime: ', f"{totalTime:.2f}", ' seconds')
+print('Time spent per fighter(url): ', timePerUrl)
+print('Total unique fighters parsed: ', len(parsed))
+
+# write evaluation results into csv
+csv.write("\n")
+csv.write("Evaluation Results\n")
+csv.write("Runtime(s), Time Per URL(s), Total Records \n")
+csv.write(f"{totalTime:.2f}" + "," + f"{timePerUrl:.2f}" + "," + str(totalFighters) + "\n")
 csv.close()
 
-stop = timeit.default_timer()
-print('Runtime: ', stop - start)
+# dump raw fighter data into a seperate csv
+if os.path.exists(raw_file):
+    os.remove(raw_file)
+csv_raw = open(raw_file, "w")
+
+csv_raw.write("Name, Wins, Losses, Weightclass\n")
+for record in parsed:
+    csv_raw.write(str(record.name) + "," + str(record.wins) + "," + str(record.losses) + "," + str(record.wtclass) + "\n")
+csv_raw.close()
