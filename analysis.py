@@ -24,8 +24,8 @@ count = 1
 
 # open csv or replace existing
 file = input("\nEnter a filename for output: ")
-file += ".csv"
 raw_file = file + "_raw.csv"
+file += ".csv"
 
 if os.path.exists(file):
     os.remove(file)
@@ -153,9 +153,9 @@ totalTime = stop - start
 totalFighters = len(parsed)
 timePerUrl = totalTime/totalFighters
 
-print('Runtime: ', f"{totalTime:.2f}", ' seconds')
-print('Time spent per fighter(url): ', timePerUrl)
-print('Total unique fighters parsed: ', len(parsed))
+print('\nRuntime:', f"{totalTime:.2f}", 'seconds')
+print('Time spent per fighter(url):', f"{timePerUrl:.2f}")
+print('Total unique fighters parsed:', len(parsed))
 
 # write evaluation results into csv
 csv.write("\n")
