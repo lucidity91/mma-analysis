@@ -90,9 +90,6 @@ class EventParser(object):
         # load url into bs4 for parsing
         self.soup = BeautifulSoup(event.text, 'html.parser')
 
-        eventName = self.soup.find('span', {'itemprop': 'name'}).text.strip()
-        print(eventName)
-
     def getMatch(self):
         match = []
         matchList = []
