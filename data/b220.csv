@@ -1,0 +1,49 @@
+Fight: 1
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Rory MacDonald,20,5,0.80,491,227,2.16,0.68,0.12
+Jon Fitch,31,7,0.82,881,430,2.05,0.67,0.14
+
+Fight: 2
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Ilima-Lei Macfarlane,9,0,1.00,39,35,1.11,0.53,0.47
+Veta Arteaga,5,2,0.71,22,20,1.10,0.52,0.19
+
+Fight: 3
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Benson Henderson,26,8,0.76,585,254,2.30,0.70,0.07
+Adam Piccolotti,11,2,0.85,131,58,2.26,0.69,0.15
+
+Fight: 4
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Phil Davis,19,5,0.79,406,172,2.36,0.70,0.09
+Liam McGeary,13,3,0.81,216,163,1.33,0.57,0.24
+
+Fight: 5
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Jordan Williams,8,2,0.80,59,53,1.11,0.53,0.27
+Diego Herzog,4,2,0.67,89,103,0.86,0.46,0.20
+
+Fight: 6
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Thomas Oswald,2,0,1.00,3,7,0.43,0.30,0.70
+Jamario Mulder,2,3,0.40,25,11,2.27,0.69,-0.29
+
+Fight: 7
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Justin Tenedora,2,1,0.67,3,7,0.43,0.30,0.37
+Matt Perez,2,2,0.50,4,9,0.44,0.31,0.19
+
+Fight: 8
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Abraham Vaesau,4,2,0.67,31,59,0.53,0.34,0.32
+Justin Roswell,3,2,0.60,15,49,0.31,0.23,0.37
+
+Fight: 9
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Aviv  Gozali,1,0,1.00,0,1,0.00,0.00,1.00
+Travis  Crain,0,0,1.00,0,0,1.00,1.00,0.00
+
+
+Evaluation Results
+Runtime(s), Time Per URL(s), Total Records 
+215.75,0.88,246

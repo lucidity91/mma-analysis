@@ -1,0 +1,753 @@
+$ python3 analysis.py 
+Select one of the following MMA promotions: 
+1) UFC
+2) Bellator
+1
+
+0) UFC 236 - Holloway vs. Poirier
+1) UFC Fight Night 149 - Volkov vs. Overeem
+2) UFC on ESPN 3 - Romero vs. Jacare 2
+3) UFC Fight Night 150 - Iaquinta vs. Cowboy
+4) UFC 237 - TBA
+5) UFC Fight Night 151 - Dos Anjos vs. Lee
+6) UFC Fight Night 152 - Gustafsson vs. Smith
+7) UFC 238 - Cejudo vs. Moraes
+8) UFC Fight Night on ESPN+ - UFC Fight Night Greenville
+9) UFC on ESPN 4 - Woodley vs. Lawler 2
+10) UFC 239 - Jones vs. Santos
+
+Select one of the above events to analyze: 0
+Adding match: Max Holloway vs Dustin Poirier
+Adding match: Kelvin Gastelum vs Israel Adesanya
+Adding match: Eryk Anders vs Khalil Rountree
+Adding match: Alan Jouban vs Dwight Grant
+Adding match: Ovince St. Preux vs Nikita Krylov
+Adding match: Jalin Turner vs Matt Frevola
+Adding match: Wilson Reis vs Alexandre Pantoja
+Adding match: Max Griffin vs Zelim Imadaev
+Adding match: Boston Salmon vs Khalid Taha
+Adding match: Belal Muhammad vs Curtis Millender
+Adding match: Montel Jackson vs Andre Soukhamthath
+Adding match: Poliana Botelho vs Lauren Mueller
+Adding match: Randy Costa vs Brandon Davis
+
+Enter a filename for output: ufc236
+
+
+********************************************
+Match:  1
+Name: Max Holloway | Record: 20-3 | Weightclass: Featherweight
+Name: Dustin Poirier | Record: 24-5 | Weightclass: Lightweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Max Holloway
+Extracting data from opponent: Brian Ortega
+Extracting data from opponent: Jose Aldo
+Extracting data from opponent: Anthony Pettis
+Extracting data from opponent: Ricardo Lamas
+Extracting data from opponent: Jeremy Stephens
+Extracting data from opponent: Charles Oliveira
+Extracting data from opponent: Cub Swanson
+Extracting data from opponent: Cole Miller
+Extracting data from opponent: Akira Corassani
+Extracting data from opponent: Clay Collard
+Extracting data from opponent: Andre Fili
+Extracting data from opponent: Will Chope
+Extracting data from opponent: Conor McGregor
+Extracting data from opponent: Dennis Bermudez
+Extracting data from opponent: Leonard Garcia
+Extracting data from opponent: Justin Lawrence
+Extracting data from opponent: Pat Schilling
+Extracting data from opponent: Dustin Poirier
+Extracting data from opponent: Eddie Rincon
+Extracting data from opponent: Harris Sarmiento
+Extracting data from opponent: Bryson Kamaka
+Extracting data from opponent: Duke Saragosa
+Extracting data from opponent: Cory Rosa
+
+Getting opponent data for:  Dustin Poirier
+Extracting data from opponent: Eddie Alvarez
+Extracting data from opponent: Justin Gaethje
+Extracting data from opponent: Anthony Pettis
+Extracting data from opponent: Jim Miller
+Extracting data from opponent: Michael Johnson
+Extracting data from opponent: Bobby Green
+Extracting data from opponent: Joseph Duffy
+Extracting data from opponent: Yancy Medeiros
+Extracting data from opponent: Carlos Diego Ferreira
+Extracting data from opponent: Conor McGregor
+Extracting data from opponent: Akira Corassani
+Extracting data from opponent: Diego Brandao
+Extracting data from opponent: Erik Koch
+Extracting data from opponent: Cub Swanson
+Extracting data from opponent: Jonathan Brookins
+Extracting data from opponent: Chan Sung Jung
+Extracting data from opponent: Max Holloway
+Extracting data from opponent: Pablo Garza
+Extracting data from opponent: Jason Young
+Extracting data from opponent: Josh Grispi
+Extracting data from opponent: Zachary Micklewright
+Extracting data from opponent: Danny Castillo
+Extracting data from opponent: Derek Gauthier
+Extracting data from opponent: Derrick Krantz
+Extracting data from opponent: Ronnie Lis
+Extracting data from opponent: Daniel Watts
+Extracting data from opponent: Joe Torrez
+Extracting data from opponent: Nate Jolly
+Extracting data from opponent: Aaron Suarez
+Extracting data from opponent: Gilbert Jimenez
+
+Name | Record | Win Ratio | Win Rate | Diff
+Max Holloway  |  417 - 197  |  2.12  |  0.68  |  0.19
+Dustin Poirier  |  461 - 205  |  2.25  |  0.69  |  0.14
+********************************************
+
+
+********************************************
+Match:  2
+Name: Kelvin Gastelum | Record: 15-3 | Weightclass: Middleweight
+Name: Israel Adesanya | Record: 16-0 | Weightclass: Middleweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Kelvin Gastelum
+Extracting data from opponent: Ronaldo Souza
+Extracting data from opponent: Michael Bisping
+Extracting data from opponent: Chris Weidman
+Extracting data from opponent: Vitor Belfort
+Extracting data from opponent: Tim Kennedy
+Extracting data from opponent: Johny Hendricks
+Extracting data from opponent: Neil Magny
+Extracting data from opponent: Nate Marquardt
+Extracting data from opponent: Tyron Woodley
+Extracting data from opponent: Jake Ellenberger
+Extracting data from opponent: Nicholas Musoke
+Extracting data from opponent: Rick Story
+Extracting data from opponent: Brian Melancon
+Extracting data from opponent: Uriah Hall
+Extracting data from opponent: Mike Ashford
+Extracting data from opponent: Bill Smallwood
+Extracting data from opponent: Mike Gentile
+Extracting data from opponent: Yair Moguel
+Extracting data from opponent: Jose Sanchez
+Extracting data from opponent: Josh Samman
+Extracting data from opponent: Collin Hart
+Extracting data from opponent: Bubba McDaniel
+Extracting data from opponent: Kito Andrews
+
+Getting opponent data for:  Israel Adesanya
+Extracting data from opponent: Anderson Silva
+Extracting data from opponent: Derek Brunson
+Extracting data from opponent: Brad Tavares
+Extracting data from opponent: Marvin Vettori
+Extracting data from opponent: Rob Wilkinson
+Extracting data from opponent: Stuart Dare
+Extracting data from opponent: Melvin Guillard
+Extracting data from opponent: Murad Kuramagomedov
+Extracting data from opponent: Andrew Flores Smith
+Extracting data from opponent: Dibir Zagirov
+Extracting data from opponent: Vladimir Katykhin
+Extracting data from opponent: Gele Qing
+Extracting data from opponent: Maui Tuigamala
+Extracting data from opponent: Kenan Song
+Extracting data from opponent: John Vake
+Extracting data from opponent: James Griffiths
+Extracting data from opponent: Neroni Savaiinaea
+
+Name | Record | Win Ratio | Win Rate | Diff
+Kelvin Gastelum  |  361 - 160  |  2.26  |  0.69  |  0.14
+Israel Adesanya  |  253 - 107  |  2.36  |  0.70  |  0.30
+********************************************
+
+
+********************************************
+Match:  3
+Name: Eryk Anders | Record: 11-3 | Weightclass: Middleweight
+Name: Khalil Rountree | Record: 7-3 | Weightclass: Light Heavyweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Eryk Anders
+Extracting data from opponent: Elias Theodorou
+Extracting data from opponent: Thiago Santos
+Extracting data from opponent: Tim Williams
+Extracting data from opponent: Lyoto Machida
+Extracting data from opponent: Markus Perez
+Extracting data from opponent: Rafael Natal
+Extracting data from opponent: Brendan Allen
+Extracting data from opponent: Jon Kirk
+Extracting data from opponent: Brian White
+Extracting data from opponent: Jesse Grun
+Extracting data from opponent: Dekaire Sanders
+Extracting data from opponent: Garrick James
+Extracting data from opponent: DeMarcus Sharpe
+Extracting data from opponent: Josh Rasberry
+Extracting data from opponent: Gene Williams
+Extracting data from opponent: Josh Senkbeil
+Extracting data from opponent: Paul Rainey
+Extracting data from opponent: Josh Vaughn
+Extracting data from opponent: Jake Reeves
+
+Getting opponent data for:  Khalil Rountree
+Extracting data from opponent: Johnny Walker
+Extracting data from opponent: Gokhan Saki
+Extracting data from opponent: Michal Oleksiejczuk
+Extracting data from opponent: Paul Craig
+Extracting data from opponent: Daniel Jolly
+Extracting data from opponent: Tyson Pedro
+Extracting data from opponent: Andrew Sanchez
+Extracting data from opponent: Justin Polendey
+Extracting data from opponent: Cameron Olson
+Extracting data from opponent: Blake Troop
+Extracting data from opponent: Livingston Lukow
+Extracting data from opponent: Josh Stansbury
+Extracting data from opponent: Cory Hendricks
+Extracting data from opponent: Dylan Jahrling
+Extracting data from opponent: Lee Cordova
+Extracting data from opponent: Prentice Williams
+Extracting data from opponent: Giovani Zavala
+Extracting data from opponent: Niels Berlemann
+Extracting data from opponent: Travis Jelmyer
+
+Name | Record | Win Ratio | Win Rate | Diff
+Eryk Anders  |  148 - 65  |  2.28  |  0.69  |  0.09
+Khalil Rountree  |  102 - 43  |  2.37  |  0.70  |  -0.00
+********************************************
+
+
+********************************************
+Match:  4
+Name: Alan Jouban | Record: 16-6 | Weightclass: Welterweight
+Name: Dwight Grant | Record: 9-2 | Weightclass: Welterweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Alan Jouban
+Extracting data from opponent: Ben Saunders
+Extracting data from opponent: Niko Price
+Extracting data from opponent: Gunnar Nelson
+Extracting data from opponent: Mike Perry
+Extracting data from opponent: Belal Muhammad
+Extracting data from opponent: Brendan O'Reilly
+Extracting data from opponent: Albert Tumenov
+Extracting data from opponent: Matt Dwyer
+Extracting data from opponent: Richard Walsh
+Extracting data from opponent: Warlley Alves
+Extracting data from opponent: Seth Baczynski
+Extracting data from opponent: Ricky Legere Jr.
+Extracting data from opponent: Armando Montoya Jr.
+Extracting data from opponent: Mike Rhodes
+Extracting data from opponent: Chris Spang
+Extracting data from opponent: Rigo Oropeza
+Extracting data from opponent: Cameron Mayer
+Extracting data from opponent: Daniel McWilliams
+Extracting data from opponent: D.J. Roberson
+Extracting data from opponent: Andrew Goldthwaite
+Extracting data from opponent: Chidi Njokuani
+Extracting data from opponent: Kyle Griffin
+Extracting data from opponent: Joden Seiders
+Extracting data from opponent: Dustin Chevalier
+
+Getting opponent data for:  Dwight Grant
+Extracting data from opponent: Carlo Pedersoli Jr.
+Extracting data from opponent: Zak Ottow
+Extracting data from opponent: Tyler Hill
+Extracting data from opponent: Danasabe Mohammed
+Extracting data from opponent: Jordan Williams
+Extracting data from opponent: Adam Corrigan
+Extracting data from opponent: Sergio Vasquez
+Extracting data from opponent: Eddie Saldana
+Extracting data from opponent: Erik Purcell
+Extracting data from opponent: Chase Owens
+Extracting data from opponent: Jason Ward
+Extracting data from opponent: Dan Girace
+Extracting data from opponent: James Contrino
+Extracting data from opponent: Anthony Wilson
+
+Name | Record | Win Ratio | Win Rate | Diff
+Alan Jouban  |  254 - 145  |  1.75  |  0.64  |  0.09
+Dwight Grant  |  68 - 42  |  1.62  |  0.62  |  0.20
+********************************************
+
+
+********************************************
+Match:  5
+Name: Ovince St. Preux | Record: 23-12 | Weightclass: Light Heavyweight
+Name: Nikita Krylov | Record: 24-6 | Weightclass: Light Heavyweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Ovince St. Preux
+Extracting data from opponent: Dominick Reyes
+Extracting data from opponent: Tyson Pedro
+Extracting data from opponent: Ilir Latifi
+Extracting data from opponent: Corey Anderson
+Extracting data from opponent: Yushin Okami
+Extracting data from opponent: Marcos Rogerio de Lima
+Extracting data from opponent: Volkan Oezdemir
+Extracting data from opponent: Jimi Manuwa
+Extracting data from opponent: Jon Jones
+Extracting data from opponent: Rafael Cavalcante
+Extracting data from opponent: Glover Teixeira
+Extracting data from opponent: Patrick Cummins
+Extracting data from opponent: Mauricio Rua
+Extracting data from opponent: Ryan Bader
+Extracting data from opponent: Ryan Jimmo
+Extracting data from opponent: Nikita Krylov
+Extracting data from opponent: Cody Donovan
+Extracting data from opponent: Gian Villante
+Extracting data from opponent: T.J. Cook
+Extracting data from opponent: Gegard Mousasi
+Extracting data from opponent: Joe Cason
+Extracting data from opponent: Ron Humphrey
+Extracting data from opponent: Benji Radach
+Extracting data from opponent: Antwain Britt
+Extracting data from opponent: Jason Day
+Extracting data from opponent: Claudio Cunha Godoy
+Extracting data from opponent: Chris Hawk
+Extracting data from opponent: Brett Chism
+Extracting data from opponent: Virgil Zwicker
+Extracting data from opponent: Nik Fekete
+Extracting data from opponent: Jonathan Smith
+Extracting data from opponent: Ombey Mobley
+Extracting data from opponent: Robert Turner
+Extracting data from opponent: Ray Lizama
+Extracting data from opponent: Rodney Wallace
+Extracting data from opponent: Todd Smart
+Extracting data from opponent: Mike Cormier
+
+Getting opponent data for:  Nikita Krylov
+Extracting data from opponent: Jan Blachowicz
+Extracting data from opponent: Fabio Maldonado
+Extracting data from opponent: Emanuel Newton
+Extracting data from opponent: Maro Perak
+Extracting data from opponent: Stjepan Bekavac
+Extracting data from opponent: Misha Cirkunov
+Extracting data from opponent: Ed Herman
+Extracting data from opponent: Francimar Barroso
+Extracting data from opponent: Marcos Rogerio de Lima
+Extracting data from opponent: Stanislav Nedkov
+Extracting data from opponent: Cody Donovan
+Extracting data from opponent: Ovince St. Preux
+Extracting data from opponent: Walt Harris
+Extracting data from opponent: Soa Palelei
+Extracting data from opponent: Gabriel Tampu
+Extracting data from opponent: Vladimir Mishchenko
+Extracting data from opponent: Julian Bogdanov
+Extracting data from opponent: Denis Simkin
+Extracting data from opponent: Valeriy Shcherbakov
+Extracting data from opponent: Vladimir Gerasimchik
+Extracting data from opponent: Igor Kukurudziak
+Extracting data from opponent: Viktor Smirnov
+Extracting data from opponent: Anatoliy Didenko
+Extracting data from opponent: Alexey Stepanov
+Extracting data from opponent: Svyatoslav Scherbakov
+Extracting data from opponent: Alexey Artemenko
+Extracting data from opponent: Denis Bogdanov
+Extracting data from opponent: Alexander Umrikhin
+Extracting data from opponent: Akhmedshaikh Gelegaev
+
+Name | Record | Win Ratio | Win Rate | Diff
+Ovince St. Preux  |  543 - 219  |  2.48  |  0.71  |  -0.06
+Nikita Krylov  |  299 - 183  |  1.63  |  0.62  |  0.18
+********************************************
+
+
+********************************************
+Match:  6
+Name: Jalin Turner | Record: 8-4 | Weightclass: Lightweight
+Name: Matt Frevola | Record: 6-1 | Weightclass: Lightweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Jalin Turner
+Extracting data from opponent: Callan Potter
+Extracting data from opponent: Vicente Luque
+Extracting data from opponent: Max Mustaki
+Extracting data from opponent: Noah Tillis
+Extracting data from opponent: Vytautas Sadauskas
+Extracting data from opponent: Richard LeRoy
+Extracting data from opponent: Paradise Vaovasa
+Extracting data from opponent: Gabriel Green
+Extracting data from opponent: Andrew Lagdaan
+Extracting data from opponent: Ronnie Borja
+Extracting data from opponent: Adrian Ajoleza
+Extracting data from opponent: Eric Steans
+Extracting data from opponent: Flavian Pilgrim
+Extracting data from opponent: Raul Hernandez
+Extracting data from opponent: Tyler Mendoza
+Extracting data from opponent: Emilas Jimenez
+Extracting data from opponent: Isaiah Culpepper
+Extracting data from opponent: Johnny Fiedler
+Extracting data from opponent: Julian Baez
+Extracting data from opponent: Ian Quinto
+
+Getting opponent data for:  Matt Frevola
+Extracting data from opponent: Lando Vannata
+Extracting data from opponent: Marco Polo Reyes
+Extracting data from opponent: Jose Flores
+Extracting data from opponent: Raush Manfio
+Extracting data from opponent: Trent McDade
+Extracting data from opponent: Emmanuel Ramirez
+Extracting data from opponent: Mike D'Angelo
+Extracting data from opponent: Josh Zuckerman
+Extracting data from opponent: Andrick Cubero Quesada
+Extracting data from opponent: Daniel De Leon
+
+Name | Record | Win Ratio | Win Rate | Diff
+Jalin Turner  |  88 - 58  |  1.52  |  0.60  |  0.06
+Matt Frevola  |  49 - 30  |  1.63  |  0.62  |  0.24
+********************************************
+
+
+********************************************
+Match:  7
+Name: Wilson Reis | Record: 23-9 | Weightclass: Flyweight
+Name: Alexandre Pantoja | Record: 20-3 | Weightclass: Flyweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Wilson Reis
+Extracting data from opponent: Ben Nguyen
+Extracting data from opponent: John Moraga
+Extracting data from opponent: Henry Cejudo
+Extracting data from opponent: Demetrious Johnson
+Extracting data from opponent: Yuta Sasaki
+Extracting data from opponent: Hector Sandoval
+Extracting data from opponent: Dustin Ortiz
+Extracting data from opponent: Jussier da Silva
+Extracting data from opponent: Scott Jorgensen
+Extracting data from opponent: Joby Sanchez
+Extracting data from opponent: Iuri Alcantara
+Extracting data from opponent: Ivan Menjivar
+Extracting data from opponent: Owen Roddy
+Extracting data from opponent: Billy Vaughan
+Extracting data from opponent: Cody Stevens
+Extracting data from opponent: Bruno Menezes
+Extracting data from opponent: Eduardo Dantas
+Extracting data from opponent: Patricio Freire
+Extracting data from opponent: Zac George
+Extracting data from opponent: Deividas Taurosevicius
+Extracting data from opponent: Shad Lierley
+Extracting data from opponent: Dwayne Shelton
+Extracting data from opponent: Roberto Vargas
+Extracting data from opponent: Joe Soto
+Extracting data from opponent: Henry Martinez
+Extracting data from opponent: Abel Cullum
+Extracting data from opponent: Bryan Caraway
+Extracting data from opponent: Justin Robbins
+Extracting data from opponent: Zach Makovsky
+Extracting data from opponent: Diego Jimenez
+Extracting data from opponent: Baba Shigeyasu
+
+Getting opponent data for:  Alexandre Pantoja
+Extracting data from opponent: Yuta Sasaki
+Extracting data from opponent: Brandon Moreno
+Extracting data from opponent: Dustin Ortiz
+Extracting data from opponent: Neil Seery
+Extracting data from opponent: Eric Shelton
+Extracting data from opponent: Damacio Page
+Extracting data from opponent: Matt Manzanares
+Extracting data from opponent: Lincoln de Sa Oliveira
+Extracting data from opponent: Daniel Araujo
+Extracting data from opponent: Rodrigo Favacho dos Santos
+Extracting data from opponent: Sandro Gemaque de Souza
+Extracting data from opponent: Samuel de Souza
+Extracting data from opponent: Bruno Azevedo
+Extracting data from opponent: Jussier da Silva
+Extracting data from opponent: Ralph Alves
+Extracting data from opponent: Magno Alves
+Extracting data from opponent: Michael William Costa
+Extracting data from opponent: Bruno Moreno
+Extracting data from opponent: Gabriel Wolff
+Extracting data from opponent: Willian Viana
+Extracting data from opponent: Peterson Maffort
+Extracting data from opponent: Antonio    Carlos
+Extracting data from opponent: Hiromasa Ogikubo
+Extracting data from opponent: Kai Kara-France
+
+Name | Record | Win Ratio | Win Rate | Diff
+Wilson Reis  |  517 - 213  |  2.43  |  0.71  |  0.01
+Alexandre Pantoja  |  288 - 146  |  1.97  |  0.66  |  0.21
+********************************************
+
+
+********************************************
+Match:  8
+Name: Max Griffin | Record: 14-6 | Weightclass: Welterweight
+Name: Zelim Imadaev | Record: 8-0 | Weightclass: Welterweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Max Griffin
+Extracting data from opponent: Thiago Alves
+Extracting data from opponent: Curtis Millender
+Extracting data from opponent: Mike Perry
+Extracting data from opponent: Elizeu Zaleski dos Santos
+Extracting data from opponent: Erick Montano
+Extracting data from opponent: Colby Covington
+Extracting data from opponent: David Mitchell
+Extracting data from opponent: Randall Wallace
+Extracting data from opponent: Chidi Njokuani
+Extracting data from opponent: Ricky Legere Jr.
+Extracting data from opponent: Waachiim Spiritwolf
+Extracting data from opponent: Fernando Gonzalez
+Extracting data from opponent: Kito Andrews
+Extracting data from opponent: Richard Rigmaden
+Extracting data from opponent: Justin Baesman
+Extracting data from opponent: Jaime Jara
+Extracting data from opponent: Joshua Miranda
+Extracting data from opponent: Aaron Hamilton
+Extracting data from opponent: Kino Vuittonet
+Extracting data from opponent: Matt Secor
+Extracting data from opponent: Jeremy Hunter
+
+Getting opponent data for:  Zelim Imadaev
+Extracting data from opponent: Ivan Gluhak
+Extracting data from opponent: Yuri Izotov
+Extracting data from opponent: Kenan Guliyev
+Extracting data from opponent: Chorshanbe Chorshanbiev
+Extracting data from opponent: Dmitriy Tuzov
+Extracting data from opponent: Kamardin Akhmadbekov
+Extracting data from opponent: Alexander Kovalenko
+Extracting data from opponent: Stanislav Pavlenko
+
+Name | Record | Win Ratio | Win Rate | Diff
+Max Griffin  |  289 - 161  |  1.80  |  0.64  |  0.06
+Zelim Imadaev  |  32 - 30  |  1.07  |  0.52  |  0.48
+********************************************
+
+
+********************************************
+Match:  9
+Name: Boston Salmon | Record: 6-1 | Weightclass: Bantamweight
+Name: Khalid Taha | Record: 12-2 | Weightclass: Bantamweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Boston Salmon
+Extracting data from opponent: Ricky Turcios
+Extracting data from opponent: Zac Riley
+Extracting data from opponent: Keith Carson
+Extracting data from opponent: Danny Mainus
+Extracting data from opponent: James DeHerrera
+Extracting data from opponent: Zac Chavez
+Extracting data from opponent: Perceu Friza
+Extracting data from opponent: J.W. Lee
+Extracting data from opponent: Saul Rosales
+Extracting data from opponent: Brad Campbell
+
+Getting opponent data for:  Khalid Taha
+Extracting data from opponent: Nad Narimani
+Extracting data from opponent: Hamza Kooheji
+Extracting data from opponent: Takafumi Otsuka
+Extracting data from opponent: Keita Ishibashi
+Extracting data from opponent: Timo-Juhani Hirvikangas
+Extracting data from opponent: Michail Chrisopoulos
+Extracting data from opponent: Nijat Valujev
+Extracting data from opponent: Daniel Makin
+Extracting data from opponent: Omer Cankardesler
+Extracting data from opponent: Ali Selcuk Ayin
+Extracting data from opponent: Manuel Bilic
+Extracting data from opponent: Florin Gardan
+Extracting data from opponent: John Isac
+Extracting data from opponent: Muhammed Celebi
+Extracting data from opponent: Eddie Pobivanez
+Extracting data from opponent: Daniel Grasse
+
+Name | Record | Win Ratio | Win Rate | Diff
+Boston Salmon  |  33 - 24  |  1.38  |  0.58  |  0.28
+Khalid Taha  |  116 - 88  |  1.32  |  0.57  |  0.29
+********************************************
+
+
+********************************************
+Match:  10
+Name: Belal Muhammad | Record: 14-3 | Weightclass: Welterweight
+Name: Curtis Millender | Record: 17-4 | Weightclass: Welterweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Belal Muhammad
+Extracting data from opponent: Geoff Neal
+Extracting data from opponent: Chance Rencountre
+Extracting data from opponent: Tim Means
+Extracting data from opponent: Jordan Mein
+Extracting data from opponent: Randy Brown
+Extracting data from opponent: Vicente Luque
+Extracting data from opponent: Augusto Montano
+Extracting data from opponent: Alan Jouban
+Extracting data from opponent: Steve Carl
+Extracting data from opponent: Zane Kamaka
+Extracting data from opponent: Keith Johnson
+Extracting data from opponent: Chris Curtis
+Extracting data from opponent: A.J. Matthews
+Extracting data from opponent: Garrett Gross
+Extracting data from opponent: Jimmy Fritz
+Extracting data from opponent: Quinton McCottrell
+Extracting data from opponent: Justin Brock
+
+Getting opponent data for:  Curtis Millender
+Extracting data from opponent: Elizeu Zaleski dos Santos
+Extracting data from opponent: Siyar Bahadurzada
+Extracting data from opponent: Max Griffin
+Extracting data from opponent: Thiago Alves
+Extracting data from opponent: Nick Barnes
+Extracting data from opponent: Matthew Frincu
+Extracting data from opponent: Kevin Holland
+Extracting data from opponent: Johnny Cisneros
+Extracting data from opponent: Ozzie Alvarez
+Extracting data from opponent: Casey Greene
+Extracting data from opponent: Eddie Mendez
+Extracting data from opponent: Steven Ciaccio
+Extracting data from opponent: Fernando Gonzalez
+Extracting data from opponent: Brennan Ward
+Extracting data from opponent: James Chaney
+Extracting data from opponent: Dominic Waters
+Extracting data from opponent: John Mercurio
+Extracting data from opponent: Alex Suhonosov
+Extracting data from opponent: J.C. Llamas
+Extracting data from opponent: Blake Belshe
+Extracting data from opponent: Paul Gemmati
+
+Name | Record | Win Ratio | Win Rate | Diff
+Belal Muhammad  |  245 - 113  |  2.17  |  0.68  |  0.14
+Curtis Millender  |  236 - 128  |  1.84  |  0.65  |  0.16
+********************************************
+
+
+********************************************
+Match:  11
+Name: Montel Jackson | Record: 7-1 | Weightclass: Bantamweight
+Name: Andre Soukhamthath | Record: 13-6 | Weightclass: Bantamweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Montel Jackson
+Extracting data from opponent: Brian Kelleher
+Extracting data from opponent: Ricky Simon
+Extracting data from opponent: Rico DiSciullo
+Extracting data from opponent: Daron McCant
+Extracting data from opponent: Jesse Wannemacher
+Extracting data from opponent: Terrence Almond
+Extracting data from opponent: Sean Huffman
+Extracting data from opponent: Josh Wiseman
+Extracting data from opponent: Thurston Lovell
+Extracting data from opponent: Richard Moad
+Extracting data from opponent: Rocco Pucillo-Scanlon
+
+Getting opponent data for:  Andre Soukhamthath
+Extracting data from opponent: Jonathan Martinez
+Extracting data from opponent: Sean O'Malley
+Extracting data from opponent: Luke Sanders
+Extracting data from opponent: Alejandro Perez
+Extracting data from opponent: Albert Morales
+Extracting data from opponent: Kin Moy
+Extracting data from opponent: Kody Nordby
+Extracting data from opponent: Carlos Galindo
+Extracting data from opponent: Brian Kelleher
+Extracting data from opponent: Tom English
+Extracting data from opponent: Corey Simmons
+Extracting data from opponent: Billy Vaughan
+Extracting data from opponent: Blair Tugman
+Extracting data from opponent: Kurt Chase-Patrick
+Extracting data from opponent: Rob Costa
+Extracting data from opponent: Vinny Tisconie
+Extracting data from opponent: Gilvan Santos
+Extracting data from opponent: Robbie Slade
+Extracting data from opponent: Rob Font
+Extracting data from opponent: Frank Sforza
+Extracting data from opponent: Jose Rustrain
+
+Name | Record | Win Ratio | Win Rate | Diff
+Montel Jackson  |  74 - 60  |  1.23  |  0.55  |  0.32
+Andre Soukhamthath  |  175 - 97  |  1.80  |  0.64  |  0.04
+********************************************
+
+
+********************************************
+Match:  12
+Name: Poliana Botelho | Record: 7-2 | Weightclass: Strawweight
+Name: Lauren Mueller | Record: 5-1 | Weightclass: Flyweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Poliana Botelho
+Extracting data from opponent: Cynthia Calvillo
+Extracting data from opponent: Syuri Kondo
+Extracting data from opponent: Pearl Gonzalez
+Extracting data from opponent: Silvana Gomez Juarez
+Extracting data from opponent: Antonia Silvaneide da Silva
+Extracting data from opponent: Karina Rodriguez
+Extracting data from opponent: Viviane Pereira
+Extracting data from opponent: Ingrid Shwartz
+Extracting data from opponent: Thais Raphaela
+
+Getting opponent data for:  Lauren Mueller
+Extracting data from opponent: Yanan Wu
+Extracting data from opponent: Shana Dobson
+Extracting data from opponent: Kelly McGill-Velasco
+Extracting data from opponent: Hannah Fitzpatrick
+Extracting data from opponent: Faye Shields
+Extracting data from opponent: Peggy Ross
+
+Name | Record | Win Ratio | Win Rate | Diff
+Poliana Botelho  |  53 - 20  |  2.65  |  0.73  |  0.05
+Lauren Mueller  |  15 - 13  |  1.15  |  0.54  |  0.30
+********************************************
+
+
+********************************************
+Match:  13
+Name: Randy Costa | Record: 0-0 | Weightclass: Bantamweight
+Name: Brandon Davis | Record: 9-5 | Weightclass: Featherweight
+
+Quality of Competition Analysis:
+-----------------------------------------------
+
+Getting opponent data for:  Randy Costa
+
+Getting opponent data for:  Brandon Davis
+Extracting data from opponent: Zabit Magomedsharipov
+Extracting data from opponent: Enrique Barzola
+Extracting data from opponent: Steven Peterson
+Extracting data from opponent: Kyle Bochniak
+Extracting data from opponent: Austin Arnett
+Extracting data from opponent: Randy Hedderick
+Extracting data from opponent: Max Mustaki
+Extracting data from opponent: Latral Perdue
+Extracting data from opponent: Thomas Vasquez
+Extracting data from opponent: Adam Denton
+Extracting data from opponent: Lawrence Purifoy
+Extracting data from opponent: Jesse Sanderson
+Extracting data from opponent: Jorge Medina
+Extracting data from opponent: Brandon Pemberton
+Extracting data from opponent: Bobby Galluzzi
+Extracting data from opponent: Zack Wallace
+Extracting data from opponent: Amir Khan
+Extracting data from opponent: Josh Kirkland
+Extracting data from opponent: Joshua Espinoza
+Extracting data from opponent: Jerquarbus Sherrod
+Extracting data from opponent: CJay Hunter
+
+Name | Record | Win Ratio | Win Rate | Diff
+Randy Costa  |  0 - 0  |  1.00  |  1.00  |  0.00
+Brandon Davis  |  113 - 80  |  1.41  |  0.59  |  0.06
+********************************************
+
+Runtime: 530.38 seconds
+Time spent per fighter(url): 1.05
+Total unique fighters parsed: 507

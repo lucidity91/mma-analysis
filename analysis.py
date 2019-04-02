@@ -29,7 +29,7 @@ file += ".csv"
 
 if os.path.exists(file):
     os.remove(file)
-csv = open(file, "w")
+csv = open("data/"+file, "w")
 
 # loop through each match in the event and do
 # simple quality of competition analysis
@@ -117,15 +117,15 @@ for match in matches:
     # print details
     print('\nName | Record | Win Ratio | Win Rate | Diff')
     print(leftFighter.name, ' | ', 
-          leftOppWins, '-', leftOppLosses, ' | ', 
-          f"{leftRatio:.2f}", ' | ', 
-          f"{leftRate:.2f}" , ' | ',
-          f"{leftWinDiff:.2f}")
+        leftOppWins, '-', leftOppLosses, ' | ', 
+        f"{leftRatio:.2f}", ' | ', 
+        f"{leftRate:.2f}" , ' | ',
+        f"{leftWinDiff:.2f}")
     print(rightFighter.name, ' | ', 
-          rightOppWins, '-', rightOppLosses, ' | ', 
-          f"{rightRatio:.2f}", ' | ', 
-          f"{rightRate:.2f}" , ' | ',
-          f"{rightWinDiff:.2f}")
+        rightOppWins, '-', rightOppLosses, ' | ', 
+        f"{rightRatio:.2f}", ' | ', 
+        f"{rightRate:.2f}" , ' | ',
+        f"{rightWinDiff:.2f}")
 
     # write to csv
     fight = "Fight: " + str(count) + "\n"
@@ -167,7 +167,7 @@ csv.close()
 # dump raw fighter data into a seperate csv
 if os.path.exists(raw_file):
     os.remove(raw_file)
-csv_raw = open(raw_file, "w")
+csv_raw = open("data/"+raw_file, "w")
 
 csv_raw.write("Name, Wins, Losses, Weightclass\n")
 for record in parsed:

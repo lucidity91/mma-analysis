@@ -1,0 +1,69 @@
+Fight: 1
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Max Holloway,20,3,0.87,417,197,2.12,0.68,0.19
+Dustin Poirier,24,5,0.83,461,205,2.25,0.69,0.14
+
+Fight: 2
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Kelvin Gastelum,15,3,0.83,361,160,2.26,0.69,0.14
+Israel Adesanya,16,0,1.00,253,107,2.36,0.70,0.30
+
+Fight: 3
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Eryk Anders,11,3,0.79,148,65,2.28,0.69,0.09
+Khalil Rountree,7,3,0.70,102,43,2.37,0.70,-0.00
+
+Fight: 4
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Alan Jouban,16,6,0.73,254,145,1.75,0.64,0.09
+Dwight Grant,9,2,0.82,68,42,1.62,0.62,0.20
+
+Fight: 5
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Ovince St. Preux,23,12,0.66,543,219,2.48,0.71,-0.06
+Nikita Krylov,24,6,0.80,299,183,1.63,0.62,0.18
+
+Fight: 6
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Jalin Turner,8,4,0.67,88,58,1.52,0.60,0.06
+Matt Frevola,6,1,0.86,49,30,1.63,0.62,0.24
+
+Fight: 7
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Wilson Reis,23,9,0.72,517,213,2.43,0.71,0.01
+Alexandre Pantoja,20,3,0.87,288,146,1.97,0.66,0.21
+
+Fight: 8
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Max Griffin,14,6,0.70,289,161,1.80,0.64,0.06
+Zelim Imadaev,8,0,1.00,32,30,1.07,0.52,0.48
+
+Fight: 9
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Boston Salmon,6,1,0.86,33,24,1.38,0.58,0.28
+Khalid Taha,12,2,0.86,116,88,1.32,0.57,0.29
+
+Fight: 10
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Belal Muhammad,14,3,0.82,245,113,2.17,0.68,0.14
+Curtis Millender,17,4,0.81,236,128,1.84,0.65,0.16
+
+Fight: 11
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Montel Jackson,7,1,0.88,74,60,1.23,0.55,0.32
+Andre Soukhamthath,13,6,0.68,175,97,1.80,0.64,0.04
+
+Fight: 12
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Poliana Botelho,7,2,0.78,53,20,2.65,0.73,0.05
+Lauren Mueller,5,1,0.83,15,13,1.15,0.54,0.30
+
+Fight: 13
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Randy Costa,0,0,1.00,0,0,1.00,1.00,0.00
+Brandon Davis,9,5,0.64,113,80,1.41,0.59,0.06
+
+
+Evaluation Results
+Runtime(s), Time Per URL(s), Total Records 
+530.38,1.05,507
