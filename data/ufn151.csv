@@ -1,0 +1,39 @@
+Fight: 1
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Rafael dos Anjos,28,11,0.72,678,317,2.14,0.68,0.04
+Kevin Lee,17,4,0.81,298,110,2.71,0.73,0.08
+
+Fight: 2
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Elizeu Zaleski dos Santos,21,5,0.81,356,162,2.20,0.69,0.12
+Neil Magny,21,7,0.75,499,205,2.43,0.71,0.04
+
+Fight: 3
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Megan Anderson,9,3,0.75,64,41,1.56,0.61,0.14
+Felicia Spencer,6,0,1.00,19,11,1.73,0.63,0.37
+
+Fight: 4
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Zak Cummings,22,6,0.79,466,277,1.68,0.63,0.16
+Trevin Giles,11,0,1.00,88,61,1.44,0.59,0.41
+
+Fight: 5
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Grant Dawson,13,1,0.93,133,100,1.33,0.57,0.36
+Michael Trizano,8,0,1.00,49,17,2.88,0.74,0.26
+
+Fight: 6
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Patrick Cummins,10,6,0.62,214,97,2.21,0.69,-0.06
+Ed Herman,23,14,0.62,767,350,2.19,0.69,-0.07
+
+Fight: 7
+Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.
+Aspen Ladd,7,0,1.00,45,25,1.80,0.64,0.36
+Sijara Eubanks,4,2,0.67,73,37,1.97,0.66,0.00
+
+
+Evaluation Results
+Runtime(s), Time Per URL(s), Total Records 
+270.08,0.88,306
