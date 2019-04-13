@@ -114,6 +114,14 @@ for match in matches:
     leftWinDiff = leftFighterRate - leftRate
     rightWinDiff = rightFighterRate - rightRate
 
+    # prediction based on stats
+    if leftWinDiff < rightWinDiff:
+        winner = leftFighter.name
+    elif rightWinDiff < leftWinDiff:
+        winner = rightFighter.name
+    else:
+        winner = "Even"
+
     # print details
     print('\nName | Record | Win Ratio | Win Rate | Diff')
     print(leftFighter.name, ' | ', 
@@ -126,10 +134,11 @@ for match in matches:
         f"{rightRatio:.2f}", ' | ', 
         f"{rightRate:.2f}" , ' | ',
         f"{rightWinDiff:.2f}")
+    print('\nPrediction based on analysis:', winner)
 
     # write to csv
-    fight = "Fight: " + str(count) + "\n"
-    csv.write(fight)
+    #fight = "Fight: " + str(count) + "\n"
+    #csv.write(fight)
 
     header = "Name, Wins, Losses, Win Rate, Opp. Wins, Opp. Losses, Opp. Win Ratio, Opp. Win Rate, Win Diff.\n"
     csv.write(header)
@@ -138,6 +147,9 @@ for match in matches:
     fighterB = str(rightFighter.name) + "," + str(rightFighter.wins) + "," + str(rightFighter.losses) + "," + f"{rightFighterRate:.2f}" + ","  + str(rightOppWins) + "," + str(rightOppLosses) + "," + f"{rightRatio:.2f}" + "," + f"{rightRate:.2f}"  + ',' + f"{rightWinDiff:.2f}" + "\n"
     csv.write(fighterA)
     csv.write(fighterB)
+
+    # write winner
+    csv.write("\nPREDICTION:," + str(winner) + "\n")
 
     space = "\n"
     csv.write(space)
