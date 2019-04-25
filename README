@@ -1,16 +1,15 @@
-Eric Mu
-Apr. 1, 2019
-001201773
-CPSC 4310: Data Processing
+MMA-Analysis by Eric Mu
 
 Contained in the data folder are the results and data dumps for
 five sample runs of the program
 
-There is also file containing a sameple terminal output during runtime
+There is also file containing a sample terminal output during runtime
 
 In order to run the program:
 
     1) Ensure that the user has Python3 installed
     2) This program requires the BeautifulSoup library
         - to install from terminal: pip3 install BeautifulSoup4 (or pip)
-    3) To run from terminal: python3 analysis.py (or python) 
+    3) To run from terminal: python3 analysis.py (or python)
+
+*fighter statistics pulled from sherdog.com
